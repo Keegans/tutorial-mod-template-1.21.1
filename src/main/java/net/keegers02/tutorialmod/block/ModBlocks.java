@@ -2,6 +2,7 @@ package net.keegers02.tutorialmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.keegers02.tutorialmod.TutorialMod;
+import net.keegers02.tutorialmod.block.custom.MagicBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -45,6 +46,9 @@ public class ModBlocks {
                             .sounds(BlockSoundGroup.DEEPSLATE))
     );
 
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool()));
+
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), block);
@@ -61,6 +65,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.PINK_GARNET_BLOCK);
             entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
+            entries.add((ModBlocks.MAGIC_BLOCK));
         });
     }
 }
