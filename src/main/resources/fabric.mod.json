@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorialmod",
+	"version": "${version}",
+	"name": "Tutorial Mod",
+	"description": "This is a tutorial mod by Kaupenjoe I got from YouTube",
+	"authors": [
+		"Keegers02!"
+	],
+	"contact": {
+		"homepage": "https://interrealmssmp.com/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/tutorialmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.keegers02.tutorialmod.TutorialMod"
+		],
+		"fabric-datagen": [
+			"net.keegers02.tutorialmod.TutorialModDataGenerator"
+		],
+		"client": [
+			"net.keegers02.tutorialmod.TutorialModClient"
+		]
+	},
+	"mixins": [
+		"tutorialmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
