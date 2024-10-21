@@ -2,6 +2,13 @@
   "item.tutorialmod.pink_garnet": "Pink Garnet",
   "item.tutorialmod.raw_pink_garnet": "Raw Pink Garnet",
   "item.tutorialmod.chisel": "Chisel",
+
+  "item.tutorialmod.pink_garnet_sword": "Pink Garnet Sword",
+  "item.tutorialmod.pink_garnet_axe": "Pink Garnet Axe",
+  "item.tutorialmod.pink_garnet_shovel": "Pink Garnet Shovel",
+  "item.tutorialmod.pink_garnet_pickaxe": "Pink Garnet Pickaxe",
+  "item.tutorialmod.pink_garnet_hoe": "Elainey",
+
   "tooltip.tutorialmod.chisel.tooltip": "Press §eShift§r for more information!",
   "tooltip.tutorialmod.chisel.shift_down": "This item chisels blocks into bricks. May also be magical!",
   "tooltip.tutorialmod.chisel.last_block_changed": "Last Block Changed at ",
