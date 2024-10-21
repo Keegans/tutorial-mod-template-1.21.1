@@ -2,11 +2,13 @@ package net.keegers02.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.keegers02.tutorialmod.block.ModBlocks;
 import net.keegers02.tutorialmod.component.ModDataComponentTypes;
 import net.keegers02.tutorialmod.item.ModItemGroups;
 import net.keegers02.tutorialmod.item.ModItems;
+import net.keegers02.tutorialmod.util.HammerUsageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 // Comment
@@ -31,5 +33,7 @@ public class TutorialMod implements ModInitializer {
 		ModDataComponentTypes.regisgerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 	}
 }
