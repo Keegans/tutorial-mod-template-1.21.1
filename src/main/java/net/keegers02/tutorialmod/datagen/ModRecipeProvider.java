@@ -48,5 +48,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.MAGIC_BLOCK)
                 .criterion(hasItem(ModBlocks.MAGIC_BLOCK), conditionsFromItem(ModBlocks.MAGIC_BLOCK))
                 .offerTo(recipeExporter, Identifier.of(TutorialMod.MOD_ID, "raw_pink_garnet_from_magic_block"));
+
+//        createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, ModItems.PINK_GARNET)
+//                .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+//                .offerTo(recipeExporter, Identifier.of(TutorialMod.MOD_ID, "pink_garnet_door"));
+        //createStairsRecipe(ModBlocks.PINK_GARNET_STAIRS, )
     }
 }

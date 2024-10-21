@@ -32,11 +32,27 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RAW_PINK_GARNET_BLOCK);
         addDrop(ModBlocks.MAGIC_BLOCK);
 
+        addDrop(ModBlocks.PINK_GARNET_STAIRS);
+        // SlabDrop takes care of double slabs dropping when mined, else it would be just 1
+        addDrop(ModBlocks.PINK_GARNET_SLAB, slabDrops(ModBlocks.PINK_GARNET_SLAB));
+
+        addDrop(ModBlocks.PINK_GARNET_BUTTON);
+        addDrop(ModBlocks.PINK_GARNET_PRESSURE_PLATE);
+
+        addDrop(ModBlocks.PINK_GARNET_WALL);
+        addDrop(ModBlocks.PINK_GARNET_FENCE);
+        addDrop(ModBlocks.PINK_GARNET_FENCE_GATE);
+
+        // Doors are two blocks in 1, so you need the doorDrops method to drop the door item, not the top or bottom block.
+        addDrop(ModBlocks.PINK_GARNET_DOOR, doorDrops(ModBlocks.PINK_GARNET_DOOR));
+        addDrop(ModBlocks.PINK_GARNET_TRAPDOOR);
+
         // Drop other things
         addDrop(ModBlocks.PINK_GARNET_ORE, oreDrops(ModBlocks.PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));
         addDrop(ModBlocks.PINK_GARNET_DEEPSLATE_ORE, multipleOreDrops(ModBlocks.PINK_GARNET_DEEPSLATE_ORE, ModItems.RAW_PINK_GARNET, 3, 7));
     }
 
+    // Custom Method from Kaupenjoe to allow for a range of drops when mined.
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops){
         RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
         return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, (LeafEntry.Builder<?>)
