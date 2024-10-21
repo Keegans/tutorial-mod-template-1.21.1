@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.keegers02.tutorialmod.block.ModBlocks;
+import net.keegers02.tutorialmod.component.ModDataComponentTypes;
 import net.keegers02.tutorialmod.item.ModItemGroups;
 import net.keegers02.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -26,6 +27,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModDataComponentTypes.regisgerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 	}
