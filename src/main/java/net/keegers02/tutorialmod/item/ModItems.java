@@ -5,6 +5,7 @@ import net.keegers02.tutorialmod.TutorialMod;
 import net.keegers02.tutorialmod.TutorialModClient;
 import net.keegers02.tutorialmod.item.custom.ChiselItem;
 import net.keegers02.tutorialmod.item.custom.HammerItem;
+import net.keegers02.tutorialmod.item.custom.ModArmorItem;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
@@ -51,8 +52,9 @@ public class ModItems {
             new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 7, -3.4f))));
 
+    // This one is different to pick up the full set benefit. Only one needs to be changed to this.
     public static  final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
-            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
     public static  final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
             new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
