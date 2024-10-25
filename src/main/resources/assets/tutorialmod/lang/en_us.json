@@ -47,5 +47,8 @@
   "tooltip.tutorialmod.magic_block.tooltip.2": "https://minecraft.fandom.com/wiki/Formatting_codes",
 
   "itemgroup.tutorialmod.pink_garnet_blocks": "Pink Garnet Blocks",
-  "itemgroup.tutorialmod.pink_garnet_items": "Pink Garnet Items"
+  "itemgroup.tutorialmod.pink_garnet_items": "Pink Garnet Items",
+
+  "trim_material.tutorialmod.pink_garnet": "Pink Garnet Material",
+  "trim_material.tutorialmod.inter_realms": "Inter Realms Armor Pattern"
 }

@@ -39,6 +39,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.PINK_GARNET_HORSE_ARMOR);
 
+                        entries.add(ModItems.INTER_REALMS_SMITHING_TEMPLATE);
+
                     }).build()
     );
 
