@@ -2,7 +2,6 @@ package net.keegers02.tutorialmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.keegers02.tutorialmod.TutorialMod;
-import net.keegers02.tutorialmod.TutorialModClient;
 import net.keegers02.tutorialmod.item.custom.ChiselItem;
 import net.keegers02.tutorialmod.item.custom.HammerItem;
 import net.keegers02.tutorialmod.item.custom.ModArmorItem;
@@ -65,6 +64,10 @@ public class ModItems {
     public static  final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
             new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
+
+    public  static  final Item PINK_GARNET_HORSE_ARMOR = registerItem("pink_garnet_horse_armor",
+            new AnimalArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN,
+                    false, new Item.Settings().maxCount(1))); //MaxCount item does not stack.
 
     private static Item registerItem( String name, Item item ){
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);

@@ -16,6 +16,8 @@
   "item.tutorialmod.pink_garnet_leggings": "Pink Garnet Leggings",
   "item.tutorialmod.pink_garnet_boots": "Pink Garnet Boots",
 
+  "item.tutorialmod.pink_garnet_horse_armor": "Pink Garnet Horse Armor",
+
   "tooltip.tutorialmod.chisel.tooltip": "Press §eShift§r for more information!",
   "tooltip.tutorialmod.chisel.shift_down": "This item chisels blocks into bricks. May also be magical!",
   "tooltip.tutorialmod.chisel.last_block_changed": "Last Block Changed at ",
